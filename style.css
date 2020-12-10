@@ -1,52 +1,75 @@
-#score {
-  text-align: center;
-}
-
-#game {
-  width: 600px;
-  height: 300px;
-  border: 2px solid black;
-  margin: auto;
-  background-image: url(./forestbg.png);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap");
+body {
+  overflow: hidden;
+  font-family: "Open Sans Condensed", sans-serif;
+  background-image: url(./background.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
+#score_container {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#level {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  font-size: 40px;
+}
+
+#game {
+  width: 1000px;
+  height: 600px;
+  border: 2px solid black;
+  margin: auto;
+  background-image: url(./winterbg.jpg);
+  background-size: cover;
+  border-radius: 30px;
+}
+
 #dino {
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
   position: relative;
-  top: 225px;
-  background-image: url("./dino.png");
+  top: 500px;
+  left: 150px;
+  background-image: url("./winterdino.png");
   background-size: cover;
 }
 
 #rock {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   position: relative;
-  top: 175px;
-  left: 550px;
-  background-image: url("./rock.png");
+  top: 400px;
+  left: 900px;
+  background-image: url("./snowman.png");
   background-size: cover;
-  -webkit-animation: rock 1.33s infinite;
-          animation: rock 1.33s infinite;
 }
 
 @-webkit-keyframes rock {
   0% {
-    left: 550px;
+    left: 900px;
   }
   100% {
-    left: -50px;
+    left: -400px;
   }
 }
 
 @keyframes rock {
   0% {
-    left: 550px;
+    left: 900px;
   }
   100% {
-    left: -50px;
+    left: -400px;
   }
 }
 
@@ -55,33 +78,63 @@
           animation: jump 0.5s;
 }
 
+.rock_animation {
+  -webkit-animation: rock 4.33s infinite;
+          animation: rock 4.33s infinite;
+}
+
 @-webkit-keyframes jump {
   0% {
-    top: 225px;
+    top: 500px;
   }
   50% {
-    top: 75px;
+    top: 300px;
   }
   75% {
-    top: 75px;
+    top: 300px;
   }
   100% {
-    top: 225px;
+    top: 500px;
   }
 }
 
 @keyframes jump {
   0% {
-    top: 225px;
+    top: 500px;
   }
   50% {
-    top: 75px;
+    top: 300px;
   }
   75% {
-    top: 75px;
+    top: 300px;
   }
   100% {
-    top: 225px;
+    top: 500px;
   }
+}
+
+#startDiv {
+  text-align: center;
+}
+
+#start {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#start:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */
