@@ -136,7 +136,7 @@ function pageLoad() {
                 rock.style.animationDuration = "1.3s";
                 level.textContent = "YOU WIN!";
             }
-        }, 80);
+        }, 60);
     }
 }
 
